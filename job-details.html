@@ -196,9 +196,9 @@ $(document).ready(function() {
 
 
     <div class="hero-section">
-        <!--<video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop" class="hero-video">
-            <source src="./files/Compressed-3-TT.mp4" type="video/mp4">
-        </video>-->
+        <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop" class="hero-video">
+            <source src="./files/par-video-hero-trim.mp4" type="video/mp4">
+        </video>
         <div class="hero-content">
             <div class="job-title2" id="position-title"> </div>
             <p id="position-title-meta" style="font-size: 1.25rem;"><span class="organization-unit"> </span> • <span class="city"> </span></p>
@@ -449,7 +449,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const jobId = params.get('rmjob') || params.get('jobId');
 
     // Fetch job details (assuming you have an endpoint to get job details by jobId)
-    fetch(`https://api.talentech.io/reachmee/feed/lkf`) // Replace with your actual API endpoint
+    fetch(`https://api.talentech.io/reachmee/feed/parksandresorts`) // Replace with your actual API endpoint
         .then(response => response.json())
         .then(jobs => {
             const job = jobs.find(job => job.ad_id === parseInt(jobId));
@@ -468,7 +468,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     iframe.style.width = "100%";
                     iframe.style.border = "none";
                     iframe.id = "applicationFormIframe";
-                    const iframeSrc = `https://web103.reachmee.com/ext/I018/716/apply?job_id=${jobId}&site=2&validator=7f4f3be3058e3cb999c1bf054afc7b49&lang=SE&ihelper=${encodeURIComponent('https://career.talentech.com/jobs/rm?rmpage=job&rmjob=' + jobId)}`;
+                    const iframeSrc = `https://web103.reachmee.com/ext/I019/837/apply?job_id=${jobId}&site=6&validator=704538e60bc74a1c82d0fac45352fa07&lang=SE&ihelper=${encodeURIComponent('https://career.talentech.com/jobs/rm?rmpage=job&rmjob=' + jobId)}`;
                     iframe.setAttribute('src', iframeSrc);
                     document.getElementById('applicationFormContainer').appendChild(iframe);
                 }
@@ -568,7 +568,7 @@ window.addEventListener('message', function(event) {
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('agent').addEventListener('click', function() {
-        var iframeUrl = "https://web103.reachmee.com/ext/I018/716/subscribe?site=2&lang=SE&validator=7f4f3be3058e3cb999c1bf054afc7b49";
+        var iframeUrl = "https://web103.reachmee.com/ext/I019/837/subscribe?site=6&lang=SE&validator=704538e60bc74a1c82d0fac45352fa07";
         document.getElementById('modalIframe').src = iframeUrl;
         $('#exampleModal').modal('show');
     });
@@ -581,17 +581,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <section class="text-center bg-dark text-light py-5">
     <div class="container">
-        <img src="./files/lkf-light.png" alt="LKF Logo" class="mb-3" style="max-width: 180px;">
+        <img src="./files/par-logo-white.svg" alt="Parks and Resorts Logo" class="mb-3" style="max-width: 180px;">
                 <div class="mt-3 mb-4" style="max-width: 600px; margin: auto;">
-		 <p style="font-size: 1.25rem;">LKF erbjuder hyresbostäder i Lunds stad, Genarp, Södra Sandby, Stångby, Veberöd, Dalby och Revinge. Totalt äger och förvaltar vi drygt 10.000 bostadslägenheter, vilket innebär att mer än 20 000 lundabor har sitt hem hos oss.
-
-</p>
+		 <p style="font-size: 1.25rem;">I Parks and Resorts ingår några av landets främsta upplevelseparker – Gröna Lund, Kolmården, Furuvik och Skara Sommarland – som har roat och engagerat människor i över 140 år. Tillsammans välkomnar vi nästan tre miljoner gäster årligen och sysselsätter fler än 6 000 personer, varav ca 400 på årsbasis. Parks and Resorts omsätter ca 1,4 miljarder kronor årligen.</p>
 		</div>
-        <div class="">
+        <!--<div class="">
             <a href="https://www.facebook.com/LKFLUND/"><img src="./files/TT-f.svg" alt="Icon 1" class="mx-2" style="width: 30px; height: 30px;"></a>
             <a href="https://se.linkedin.com/company/lkf-lund"><img src="./files/TT-l.svg" alt="Icon 2" class="mx-2" style="width: 30px; height: 30px;"></a>
             <a href="https://lkf.no/kontakt-selskapet/"><img src="./files/TT-e.svg" alt="Icon 4" class="mx-2" style="width: 30px; height: 30px;"></a>
-        </div>
+        </div>-->
     </div>
 </section>
 
@@ -740,7 +738,7 @@ $(document).ready(function () {
 });
 
 function fetchJobs(currentJobId) {
-    fetch('https://api.talentech.io/reachmee/feed/lkf')
+    fetch('https://api.talentech.io/reachmee/feed/parksandresorts')
         .then(response => response.json())
         .then(data => {
             jobs = data.filter(job => job.ad_id !== parseInt(currentJobId));
@@ -794,7 +792,7 @@ $(document).ready(function() {
     // Get 'rmjob' if present, otherwise get 'jobId'
     const jobId = params.get('rmjob') ? parseInt(params.get('rmjob'), 10) : parseInt(params.get('jobId'), 10);
 
-    fetch('https://api.talentech.io/reachmee/feed/lkf')
+    fetch('https://api.talentech.io/reachmee/feed/parksandresorts')
         .then(response => response.json())
         .then(jobs => {
             const job = jobs.find(job => job.ad_id === jobId);
@@ -885,7 +883,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (openApplication !== null) {
         // Change the src of the iframe
         const applicationFormIframe = document.getElementById('applicationFormIframe');
-        applicationFormIframe.src = "https://web103.reachmee.com/ext/I018/716/apply?site=2&lang=SE&validator=7f4f3be3058e3cb999c1bf054afc7b49&job_id=-1";
+        applicationFormIframe.src = "https://web103.reachmee.com/ext/I019/837/apply?site=5&lang=SE&validator=704538e60bc74a1c82d0fac45352fa07&job_id=-1";
         
         // Hide the job description and metadata
         document.getElementById('our-process').style.display = 'none';
