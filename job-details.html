@@ -644,8 +644,8 @@ $(document).ready(function () {
             if (job.country) { // Check if job has a country
                 locationSet.add(job.country);
             }
-            if (job.title) { // Check if job has a title
-                jobTypeSet.add(job.title);
+            if (job.employment_level) { // Use employment level for job type filter
+                jobTypeSet.add(job.employment_level);
             }
         });
 
@@ -655,8 +655,8 @@ $(document).ready(function () {
             $('#locationFilter').append(`<option value="${country}">${country}</option>`);
         });
 
-        // Populate job type filter
-        $('#jobTypeFilter').html('<option value="All">Alla typer av jobb</option>');
+        // Populate job type filter using employment levels
+        $('#jobTypeFilter').html('<option value="All">Alla anställningstyper</option>');
         jobTypeSet.forEach(type => {
             $('#jobTypeFilter').append(`<option value="${type}">${type}</option>`);
         });
@@ -670,7 +670,7 @@ $(document).ready(function () {
         const selectedJobType = $('#jobTypeFilter').val();
         let filteredJobs = jobs.filter(job => {
             return (selectedCountry === 'All' || job.country === selectedCountry) &&
-                   (selectedJobType === 'All' || job.title === selectedJobType);
+                   (selectedJobType === 'All' || job.employment_level === selectedJobType);
         });
 
         if (filteredJobs.length === 0) {
@@ -726,6 +726,7 @@ $(document).ready(function () {
     $('#jobTypeFilter').change(displayJobs);
 });
 </script>
+
 
 
 
