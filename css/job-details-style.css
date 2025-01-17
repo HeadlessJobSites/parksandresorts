@@ -29,7 +29,7 @@
 @font-face {
 	font-family: 'Telegraf';
 	src: url('/fonts/Telegraf-UltraBold.ttf');
-	font-weight: 800;
+	font-weight: 400;
 	font-style: normal;
 	font-display: swap;
 }
@@ -125,13 +125,13 @@ body {
 }
 h1 {
 	font-family: "Abril Fatface", Telegraf;
-	font-weight: 800;
+	font-weight: 400;
 	font-size: 4rem;
 	margin-bottom: 2rem;
 }
 #position-title {
     font-family: "Abril Fatface", Telegraf;
-    font-weight: 800;
+    font-weight: 400;
     font-size: 4rem;
 }
 .btn-primary {
@@ -302,7 +302,7 @@ h2 {
 }
 .blockquote p {
 	font-size: 40px;
-	font-weight: 800;
+	font-weight: 400;
 	line-height: 1.5;
 }
 .blockquote-footer {
@@ -426,7 +426,7 @@ h2 {
 }
 .job-description h3,.job-description h4,.job-description h5,.job-description h6,.job-description h2 {
 	font-size: 1.1rem;
-	font-weight: 800;
+	font-weight: 400;
 }
 .job-description p {
 	text-align: left !important;
@@ -529,7 +529,7 @@ h2 {
 	}
 }
 strong {
-	font-weight: 800;
+	font-weight: 400;
 }
 a:hover {
 	color: #0056b3;
@@ -565,7 +565,7 @@ a:hover {
 	padding: 1.75rem;
 }
 #loadMore {
-	font-weight: 800;
+	font-weight: 400;
 }
 @media (max-width: 991.98px) {
 	.background-image {
@@ -591,7 +591,7 @@ a:hover {
     line-height: 1.6;
 }
 #jobTitle {
-	font-weight: 800;
+	font-weight: 400;
 }
 .job-section {
 	background-color: #f8f9fa;
@@ -601,7 +601,7 @@ a:hover {
 	margin-bottom: 15px;
 }
 .job-info-title {
-	font-weight: 800;
+	font-weight: 400;
 	display: block;
 }
 .apply-btn {
