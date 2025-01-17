@@ -5,12 +5,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LKF - Lediga tjänster</title>
+    <title>Parks and Resorts - Lediga tjänster</title>
     <!-- Bootstrap CSS -->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 <link rel="stylesheet" href="./css/index-style.css">
 <link rel="stylesheet" href="./css/job-details-style.css">
-<link rel="icon" type="image/x-icon" href="./files/lkf-favicon.ico">
+<link rel="icon" type="image/x-icon" href="./files/favicon.ico">
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
@@ -19,12 +19,14 @@
 <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
 <script type="text/javascript" src="https://web103.reachmee.com/customerjs/helper.js"></script>
 	
-  <meta property="og:title" content="Lunds Kommuns Fastighets ABs karriärportal">
-  <meta property="og:image" content="https://headlessjobsites.github.io/lkf/files/Lediga-jobb.jpg"">
-  <meta property="og:url" content="https://headlessjobsites.github.io/lkf/">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Lunds Kommuns Fastighets ABs karriärportal">
-  <meta name="twitter:image" content="https://headlessjobsites.github.io/lkf/files/Lediga-jobb.jpg"">
+  <meta property="og:title" content="Parks and Resorts karriärportal">
+  <meta property="og:description" content="Lediga jobb hos Parks and Resorts">
+  <meta property="og:image" content="https://headlessjobsites.github.io/lkf/files/Lediga-jobb-PaR.png">
+  <meta property="og:url" content="https://headlessjobsites.github.io/parksandresorts">
+  <meta name="twitter:card" content="Parks and Resorts karriärportal">
+  <meta name="twitter:title" content="Parks and Resorts karriärportal">
+  <meta name="twitter:description" content="Lediga jobb hos Parks and Resorts">
+  <meta name="twitter:image" content="https://headlessjobsites.github.io/lkf/files/Lediga-jobb-PaR.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:type" content="website">
@@ -41,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const params = new URLSearchParams(window.location.search);
     const jobId = params.get('rmjob') ? parseInt(params.get('rmjob'), 10) : parseInt(params.get('jobId'), 10);
 
-    fetch('https://api.talentech.io/reachmee/feed/lkf')
+    fetch('https://api.talentech.io/reachmee/feed/parksandresorts')
         .then(response => response.json())
         .then(jobs => {
             const job = jobs.find(job => job.ad_id === jobId);
@@ -123,7 +125,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: rgba(0, 0, 0, 0.0);">
     <div class="container m-py-1">
         <a class="navbar-brand" href="./" aria-label="Home">
-            <img src="./files/lkf-light.png" class="d-inline-block align-top" alt="">
+            <img src="./files/par-logo-white.svg" class="d-inline-block align-top" alt="">
         </a>
         <div class="d-flex justify-content-end align-items-center flex-grow-1">
             <a class="nav-link ml-auto d-lg-none btn btn-primary apply-btn m-mr-2" href="#appform-header">Ansök</a>
@@ -151,7 +153,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     <a class="nav-link" href="#our-process">Rekryteringsprocess</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" target="blank" href="https://lkf.se">lkf.se <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" target="blank" href="https://parksandresorts.com">parksandresorts.com <span class="sr-only">(current)</span></a>
                 </li>
             </ul>
         </div>
@@ -279,7 +281,7 @@ document.addEventListener("DOMContentLoaded", function() {
 function loadExternalScriptAndBuildIframe() {
     var script = document.createElement('script');
     script.type = 'text/javascript';
-    script.src = 'https://web103.reachmee.com/customerjs/I018-716-2.js';
+    script.src = 'https://web103.reachmee.com/customerjs/I019-837-6.js';
     script.onload = function() {
         buildIframe();
     };
@@ -288,11 +290,11 @@ function loadExternalScriptAndBuildIframe() {
 
 function buildIframe() {
     var iFrameUrl = 'https://web103.reachmee.com/ext/';
-    var validator = '7f4f3be3058e3cb999c1bf054afc7b49';
-    var iid = 'I018';
-    var customer = '716';
-    var site = '2';
-    var iHelperUrl = 'https://headlessjobsites.github.io/lkf/job-details.html?';
+    var validator = '704538e60bc74a1c82d0fac45352fa07';
+    var iid = 'I019';
+    var customer = '837';
+    var site = '6';
+    var iHelperUrl = 'https://headlessjobsites.github.io/parksandresorts/job-details.html?';
     var height = '4000';
     var langDef = 'SE';
     var title = 'ReachMee Recruit external site';
