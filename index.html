@@ -248,7 +248,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <p>"Ut in orci risus. Praesent elementum quam eu nulla rutrum feugiat. Sed ultrices, diam sit amet placerat efficitur, eros orci mattis risus, vitae aliquet magna mauris fermentum augue. Morbi ut ante rutrum, mollis augue at, porta mauris. In hac habitasse platea dictumst. Donec porta molestie eros at laoreet. Quisque dignissim et ex et condimentum. Suspendisse venenatis est ac dui dignissim pharetra. Etiam vitae bibendum lorem."</p>
     </div>
     <div class="col-lg-7 order-1 order-lg-2">
-        <div class="background-image rounded-image m-mb-0" style="background-image: url('./files/TT-roger-1.jpg');"></div>
+        <div class="background-image rounded-image m-mb-0" style="background-image: url('./files/TT-carolina-1.jpg');"></div>
     </div>
 </div>
 	    
@@ -606,7 +606,7 @@ document.addEventListener('DOMContentLoaded', () => {
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('agent').addEventListener('click', function() {
-        var iframeUrl = "https://web103.reachmee.com/ext/I018/716/subscribe?site=2&lang=SE&validator=7f4f3be3058e3cb999c1bf054afc7b49";
+        var iframeUrl = "https://web103.reachmee.com/ext/I019/837/subscribe?site=6&lang=SE&validator=704538e60bc74a1c82d0fac45352fa07";
         document.getElementById('modalIframe').src = iframeUrl;
         $('#exampleModal').modal('show');
     });
@@ -621,15 +621,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <section class="text-center bg-dark text-light py-5">
     <div class="container">
-        <img src="./files/lkf-light.png" alt="LKF Logo" class="mb-3" style="max-width: 180px;">
+        <img src="./files/par-logo-white.svg" alt="Parks and Resorts Logo" class="mb-3" style="max-width: 180px;">
                 <div class="mt-3 mb-4" style="max-width: 600px; margin: auto;">
-		 <p style="font-size: 1.25rem;">LKF erbjuder hyresbostäder i Lunds stad, Genarp, Södra Sandby, Stångby, Veberöd, Dalby och Revinge. Totalt äger och förvaltar vi drygt 10.000 bostadslägenheter, vilket innebär att mer än 20 000 lundabor har sitt hem hos oss.</p>
+		 <p style="font-size: 1.25rem;">I Parks and Resorts ingår några av landets främsta upplevelseparker – Gröna Lund, Kolmården, Furuvik och Skara Sommarland – som har roat och engagerat människor i över 140 år. Tillsammans välkomnar vi nästan tre miljoner gäster årligen och sysselsätter fler än 6 000 personer, varav ca 400 på årsbasis. Parks and Resorts omsätter ca 1,4 miljarder kronor årligen.</p>
 		</div>
-        <div class="">
+        <!--<div class="">
             <a href="https://www.facebook.com/LKFLUND/"><img src="./files/TT-f.svg" alt="Icon 1" class="mx-2" style="width: 30px; height: 30px;"></a>
             <a href="https://se.linkedin.com/company/lkf-lund"><img src="./files/TT-l.svg" alt="Icon 2" class="mx-2" style="width: 30px; height: 30px;"></a>
             <a href="mailto:kundcenter@lkf.se"><img src="./files/TT-e.svg" alt="Icon 4" class="mx-2" style="width: 30px; height: 30px;"></a>
-        </div>
+        </div>-->
     </div>
 </section>
 
@@ -804,7 +804,7 @@ function displayJobs() {
 
     // Function to fetch jobs from the API
     function fetchJobs() {
-        fetch('https://api.talentech.io/reachmee/feed/lkf') // Ensure this URL is correct
+        fetch('https://api.talentech.io/reachmee/feed/parksandresorts') // Ensure this URL is correct
             .then(response => response.json())
             .then(data => {
                 jobs = data; // Store fetched jobs
@@ -849,7 +849,7 @@ function displayJobs() {
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 <script>
     async function fetchFeed() {
-        const response = await fetch('https://api.talentech.io/reachmee/feed/lkf');
+        const response = await fetch('https://api.talentech.io/reachmee/feed/parksandresorts');
         return await response.json();
     }
 
