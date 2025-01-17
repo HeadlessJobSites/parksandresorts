@@ -124,13 +124,13 @@ body {
 	font-weight:;*/
 }
 h1 {
-	font-family: Telegraf;
+	font-family: "Abril Fatface", Telegraf;
 	font-weight: 800;
 	font-size: 4rem;
 	margin-bottom: 2rem;
 }
 #position-title {
-    font-family: Telegraf;
+    font-family: "Abril Fatface", Telegraf;
     font-weight: 800;
     font-size: 4rem;
 }
