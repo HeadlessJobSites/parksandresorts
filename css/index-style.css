@@ -164,14 +164,16 @@ h2, h2 *, h3, h3 * {
 }
 .btn-primary {
 	background-color: #cfae78;
+	color: #182047;
 	border: 0;
 	border-radius: 0px;
     padding: 0.6rem 2.5rem;
     padding-bottom: 0.8rem;
 }
 .btn-primary:hover {
-	background-color: #1a192a;
-	border-color: #1a192a;
+	background-color: #182047;
+	border-color: #182047;
+	color: #cfae78;
 }
 .nav-link {
 	font-size: 1.1rem;
@@ -183,7 +185,7 @@ h2, h2 *, h3, h3 * {
 }
 h2 {
 	font-size: 3rem;
-	font-weight: 700;
+	font-weight: 400;
 }
 .background-image {
 	background-size: cover;
@@ -354,7 +356,7 @@ h2 {
 	line-height: 1.5;
 }
 .blockquote-footer {
-	color: #fff;
+	color: #182047;
 	font-size: 20px;
 }
 .benefits-section .container {
@@ -381,7 +383,7 @@ h2 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #f0f0f0;
+    background-color: #f7f4eb;
     border-radius: 0;
     padding: 20px;
     padding-top: 50px;
@@ -468,7 +470,7 @@ h2 {
 .process-icon p, .process-icon h3 {
 	font-size: 4.5rem;
 	position: absolute;
-	font-weight: 700;
+	font-weight: 400;
 }
 .process-icon img {
 	width: 25px;
@@ -538,7 +540,7 @@ h2 {
 	flex-direction: column;
 	justify-content: start;
 	align-items: center;
-	background-color: #f0f0f0;
+	background-color: #f7f4eb;
 	border-radius: 0px;
 	padding: 20px;
 	padding-top: 60px;
@@ -612,7 +614,7 @@ a:hover {
 	left: -8px;
 }
 .card-category span {
-	background: #f0f0f0;
+	background: #f7f4eb;
 	padding: 8px;
 	border-radius: 0px;
 	font-size: 0.9rem;
@@ -799,7 +801,7 @@ font-size: 1.8rem;
 }
 .process-section .process-content h3 {
     font-size: 1rem;
-    font-weight: 700;
+    font-weight: 400;
 }
 .card-title {
     font-size: 1.25rem;
