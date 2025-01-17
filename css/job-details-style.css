@@ -231,9 +231,6 @@ h2 {
 	height: 450px;
 	display: block;
 }
-#applform {
-    padding-bottom: 30px;
-}
 @media (max-width: 768px) {
 	.team-member {
 		flex: 0 0 70%;
@@ -415,7 +412,7 @@ h2 {
 .process-icon p, .process-icon h3 {
 	font-size: 4.5rem;
 	position: absolute;
-	font-weight: 700;
+	font-weight: 400;
 }
 .process-icon img {
 	width: 25px;
@@ -742,7 +739,7 @@ font-size: 1.8rem;
 }
 .process-section .process-content h3 {
     font-size: 1rem;
-    font-weight: 700;
+    font-weight: 400;
 }
 .card-title {
     font-size: 1.25rem;
