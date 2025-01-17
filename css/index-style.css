@@ -163,7 +163,7 @@ h2, h2 *, h3, h3 * {
     font-size: 4rem;
 }
 .btn-primary {
-	background-color: #539333;
+	background-color: #cfae78;
 	border: 0;
 	border-radius: 0px;
     padding: 0.6rem 2.5rem;
@@ -340,7 +340,7 @@ h2 {
 	height: auto;
 }
 .quote-section {
-	background-color: #539333;
+	background-color: #cfae78;
 	color: #fff;
 	padding: 60px 20px;
 }
@@ -391,7 +391,7 @@ h2 {
 .benefit-icon {
     position: relative;
     margin-bottom: -40px;
-    background-color: #539333;
+    background-color: #cfae78;
     border-radius: 0;
     width: 100px;
     border-radius: 50%;
@@ -663,7 +663,7 @@ a:hover {
 	display: block;
 }
 .apply-btn {
-    background-color: #539333;
+    background-color: #cfae78;
     color: white !important;
     border: none;
     text-decoration: none !important;
