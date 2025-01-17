@@ -695,9 +695,13 @@ $(document).ready(function () {
     // Adjust jobsToShow based on window resize
     $(window).resize(function() {
         jobsToShow = window.innerWidth > 768 ? jobsToShowDesktop : jobsToShowMobile;
-        displayedJobs = Math.min(jobsToShow, jobs.length); // Adjust displayedJobs based on new jobsToShow
-        displayJobs(); // Redisplay jobs based on new size
-        updateLoadMoreVisibility(); // Update button visibility after resize
+        if ($('#locationFilter').val() === 'All' && $('#jobTypeFilter').val() === 'All') {
+            displayedJobs = jobsToShow;
+        } else {
+            displayedJobs = jobs.length; // Show all jobs if filters are applied
+        }
+        displayJobs();
+        updateLoadMoreVisibility();
     });
 
     // Function to populate filter dropdowns based on jobs
@@ -732,36 +736,35 @@ $(document).ready(function () {
         $('#jobList').empty(); // Clear current jobs
 
         if (jobs.length === 0) {
-            // Display a message if there are no jobs
             $('#jobList').append('<p class="no-jobs-message mx-3 m-mx-0">Det finns för närvarande inga lediga jobb publicerade.</p>');
-            $('#filtersContainer').hide(); // Hide filters
-            $('#loadMore').hide(); // Hide "Load More" button since there are no jobs
-            return; // Exit the function early
+            $('#filtersContainer').hide();
+            $('#loadMore').hide();
+            return;
         } else {
-            $('#filtersContainer').show(); // Show filters if jobs exist
+            $('#filtersContainer').show();
         }
 
-        let filteredJobs = jobs.slice(0, displayedJobs); // Get the subset of jobs to be displayed
         const selectedCountry = $('#locationFilter').val();
         const selectedJobType = $('#jobTypeFilter').val();
-        filteredJobs = filteredJobs.filter(job => {
+
+        let filteredJobs = jobs.filter(job => {
             return (selectedCountry === 'All' || job.country === selectedCountry) &&
                    (selectedJobType === 'All' || job.employment_level === selectedJobType);
         });
 
+        displayedJobs = filteredJobs.length; // Update displayed jobs count based on filters
+
         if (filteredJobs.length === 0) {
-            // Display a message if no jobs match the filters
             $('#jobList').append('<p class="no-jobs-message">Inga jobb matchar dina filter.</p>');
-            $('#loadMore').hide(); // Hide "Load More" button since there are no jobs to load
-            return; // Exit the function early
+            $('#loadMore').hide();
+            return;
         }
 
-        // Add job cards to the DOM
         filteredJobs.forEach(job => {
             $('#jobList').append(buildJobCard(job));
         });
 
-        updateLoadMoreVisibility(); // Update the visibility of the "Load More" button
+        updateLoadMoreVisibility();
     }
 
     // Function to build HTML for a job card
@@ -786,7 +789,7 @@ $(document).ready(function () {
 
     // Function to update the visibility of the "Load More" button
     function updateLoadMoreVisibility() {
-        if (displayedJobs >= jobs.length) {
+        if (displayedJobs >= jobs.length || $('#locationFilter').val() !== 'All' || $('#jobTypeFilter').val() !== 'All') {
             $('#loadMore').hide();
         } else {
             $('#loadMore').show();
@@ -820,13 +823,11 @@ $(document).ready(function () {
 
     // Event listeners for filter dropdowns
     $('#locationFilter').change(function() {
-        displayedJobs = jobsToShow; // Reset displayed jobs to show initial count based on current device
         displayJobs(); // Apply filter and display jobs
         updateLoadMoreVisibility(); // Update "Load More" button visibility based on filters
     });
 
     $('#jobTypeFilter').change(function() {
-        displayedJobs = jobsToShow; // Reset displayed jobs to show initial count based on current device
         displayJobs(); // Apply filter and display jobs
         updateLoadMoreVisibility(); // Update "Load More" button visibility based on filters
     });
