@@ -39,7 +39,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: rgba(0, 0, 0, 0.0);">
     <div class="container m-py-1">
         <a class="navbar-brand" href="./" aria-label="Home">
-            <img src="./files/lkf-light.png" class="d-inline-block align-top" alt="">
+            <img src="./files/par-logo-white.svg" class="d-inline-block align-top" alt="">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -57,7 +57,7 @@
                     <a class="nav-link" href="./#our-process">Rekryteringsprocess</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" target="blank" href="https://lkf.se">lkf.se <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" target="blank" href="https://parksandresorts.com/">parksandresorts.com <span class="sr-only">(current)</span></a>
                 </li>
             </ul>
         </div>
@@ -93,7 +93,7 @@ $(document).ready(function() {
 
     <div class="hero-section">
         <video playsinline autoplay loop muted class="hero-video">
-            <source src="https://career.talentech.com/files/Compressed-TT.mp4" type="video/mp4">
+            <source src="./files/par-video-trim.mp4" type="video/mp4">
         </video>
         <div class="hero-content">
             <h1>Jobba <span style="font-weight: 800;">hos oss</span></h1>
@@ -105,7 +105,7 @@ $(document).ready(function() {
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   // Fetch the jobs from the feed
-  fetch('https://api.talentech.io/reachmee/feed/lkf')
+  fetch('https://api.talentech.io/reachmee/feed/parksandresorts')
     .then(response => response.json())
     .then(jobs => {
       const positionsCount = jobs.length; // Get the count of jobs from the feed
