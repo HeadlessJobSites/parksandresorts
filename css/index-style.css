@@ -153,6 +153,10 @@ h1 {
 	font-size: 4rem;
 	margin-bottom: 2rem;
 }
+h2, h2 *, h3, h3 * {
+	font-family: "Abril Fatface",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+	font-weight: 400;
+}
 #position-title {
     font-family: "Abril Fatface";
     font-weight: 400;
