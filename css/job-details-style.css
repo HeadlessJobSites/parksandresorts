@@ -231,6 +231,9 @@ h2 {
 	height: 450px;
 	display: block;
 }
+#applform {
+    padding-bottom: 30px;
+}
 @media (max-width: 768px) {
 	.team-member {
 		flex: 0 0 70%;
