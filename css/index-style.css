@@ -164,15 +164,15 @@ h2, h2 *, h3, h3 * {
 }
 .btn-primary {
 	background-color: #cfae78;
-	color: #182047;
+	color: #2b2e31;
 	border: 0;
 	border-radius: 0px;
     padding: 0.6rem 2.5rem;
     padding-bottom: 0.8rem;
 }
 .btn-primary:hover {
-	background-color: #182047;
-	border-color: #182047;
+	background-color: #2b2e31;
+	border-color: #2b2e31;
 	color: #cfae78;
 }
 .nav-link {
@@ -343,7 +343,7 @@ h2 {
 }
 .quote-section {
 	background-color: #cfae78;
-	color: #182047;
+	color: #2b2e31;
 	padding: 60px 20px;
 }
 .quote-section .container {
@@ -356,7 +356,7 @@ h2 {
 	line-height: 1.5;
 }
 .blockquote-footer {
-	color: #182047;
+	color: #2b2e31;
 	font-size: 20px;
 }
 .benefits-section .container {
@@ -402,7 +402,7 @@ h2 {
     align-items: center;
     justify-content: center;
     z-index: 2;
-    color: #182047;
+    color: #2b2e31;
 }
 .benefit-icon img {
 	width: 25px;
