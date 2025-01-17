@@ -113,7 +113,7 @@ h1#form-heading {
 }
 .job-header {
 	font-weight: bold;
-	background-color: #f8f9fa;
+	background-color: #f7f4eb;
 	border-bottom: 2px solid #e9ecef;
 }
 .job-item {
@@ -255,7 +255,7 @@ h2 {
 }
 }
 .bg-light {
-	background-color: #f8f9fa;
+	background-color: #f7f4eb;
 }
 .rounded-img {
 	width: 100%;
@@ -591,7 +591,7 @@ a:hover {
 	font-weight: 400;
 }
 .job-section {
-	background-color: #f8f9fa;
+	background-color: #f7f4eb;
 	padding: 0;
 }
 .job-info {
