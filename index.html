@@ -700,71 +700,56 @@ $(document).ready(function () {
         updateLoadMoreVisibility(); // Update button visibility after resize
     });
 
-    // Function to populate filter dropdowns based on jobs
-    function populateFilters() {
-        const locationSet = new Set();
-        const jobTypeSet = new Set();
+// Function to populate filter dropdowns based on jobs
+function populateFilters() {
+    const locationSet = new Set();
+    const jobTypeSet = new Set();
 
-        jobs.forEach(job => {
-            if (job.country) { // Check if job has a country
-                locationSet.add(job.country);
-            }
-            if (job.title) { // Check if job has a title
-                jobTypeSet.add(job.title);
-            }
-        });
+    jobs.forEach(job => {
+        if (job.country) { // Check if job has a country
+            locationSet.add(job.country);
+        }
+        if (job.employment_level) { // Check if job has an employment level
+            jobTypeSet.add(job.employment_level);
+        }
+    });
 
-	    
-	// Populate location filter
-        $('#locationFilter').html('<option value="All">Alla platser</option>');
-        locationSet.forEach(country => {
-            $('#locationFilter').append(`<option value="${country}">${country}</option>`);
-        });
+    // Populate location filter
+    $('#locationFilter').html('<option value="All">Alla platser</option>');
+    locationSet.forEach(country => {
+        $('#locationFilter').append(`<option value="${country}">${country}</option>`);
+    });
 
-        // Populate job type filter
-        $('#jobTypeFilter').html('<option value="All">Alla typer av jobb</option>');
-        jobTypeSet.forEach(type => {
-            $('#jobTypeFilter').append(`<option value="${type}">${type}</option>`);
-        });
-    }
+    // Populate job type filter with employment levels
+    $('#jobTypeFilter').html('<option value="All">Alla anställningstyper</option>');
+    jobTypeSet.forEach(type => {
+        $('#jobTypeFilter').append(`<option value="${type}">${type}</option>`);
+    });
+}
 
-    // Function to display jobs based on filters
+// Apply filters within displayJobs function
 function displayJobs() {
     $('#jobList').empty(); // Clear current jobs
-
-    if (jobs.length === 0) {
-        // Display a message if there are no jobs
-        $('#jobList').append('<p class="no-jobs-message mx-3 m-mx-0">Det finns för närvarande inga lediga jobb publicerade.</p>');
-        $('#filtersContainer').hide(); // Hide filters
-        $('#loadMore').hide(); // Hide "Load More" button since there are no jobs
-        return; // Exit the function early
-    } else {
-        $('#filtersContainer').show(); // Show filters if jobs exist
-    }
-
     let filteredJobs = jobs.slice(0, displayedJobs); // Get the subset of jobs to be displayed
 
-    // Apply filters
     const selectedCountry = $('#locationFilter').val();
     const selectedJobType = $('#jobTypeFilter').val();
     filteredJobs = filteredJobs.filter(job => {
         return (selectedCountry === 'All' || job.country === selectedCountry) &&
-               (selectedJobType === 'All' || job.title === selectedJobType);
+               (selectedJobType === 'All' || job.employment_level === selectedJobType);
     });
 
     if (filteredJobs.length === 0) {
-        // Display a message if no jobs match the filters
         $('#jobList').append('<p class="no-jobs-message">Inga jobb matchar dina filter.</p>');
         $('#loadMore').hide(); // Hide "Load More" button since there are no jobs to load
-        return; // Exit the function early
+        return;
     }
 
-    // Add job cards to the DOM
     filteredJobs.forEach(job => {
         $('#jobList').append(buildJobCard(job));
     });
 
-    updateLoadMoreVisibility(); // Update the visibility of the "Load More" button
+    updateLoad MoreVisibility(); // Update the visibility of the "Load More" button
 }
 
 
