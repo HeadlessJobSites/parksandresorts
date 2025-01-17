@@ -292,8 +292,8 @@ h2 {
 	height: auto;
 }
 .quote-section {
-	background-color: #8f53f0;
-	color: #fff;
+	background-color: #e6ca92;
+	color: #182047;
 	padding: 60px 20px;
 }
 .quote-section .container {
@@ -306,7 +306,7 @@ h2 {
 	line-height: 1.5;
 }
 .blockquote-footer {
-	color: #fff;
+	color: #182047;
 	font-size: 20px;
 }
 .benefits-section .container {
